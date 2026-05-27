@@ -1249,3 +1249,89 @@ section{ position:relative; }
   font-size:16px;
   font-weight:600;
 }
+
+
+/* ===== MOBILE RESPONSIVE FIX ===== */
+@media (max-width: 720px){
+
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+  }
+
+  .container{
+    width:100%;
+    max-width:100%;
+    padding-left:18px;
+    padding-right:18px;
+    overflow-x:hidden;
+  }
+
+  .team-grid{
+    grid-template-columns:1fr !important;
+    gap:26px;
+  }
+
+  .team-card{
+    width:100%;
+    max-width:100%;
+  }
+
+  .team-card img{
+    width:100%;
+    height:auto;
+    aspect-ratio:4/4.6;
+    object-fit:cover;
+  }
+
+  .team-card__body{
+    padding:24px 26px;
+  }
+
+  .team-card h3{
+    font-size:1.55rem;
+    line-height:1.1;
+  }
+
+  .team-card .role{
+    font-size:.82rem;
+    letter-spacing:.18em;
+    line-height:1.8;
+  }
+
+  .team-card p{
+    font-size:1rem;
+    line-height:1.65;
+  }
+
+  .grid,
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .values-grid,
+  .client-grid,
+  .wcu-cards-grid,
+  .wcu-ops-grid,
+  .wcu-certs-grid,
+  .wcu-ind-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .reveal-left,
+  .reveal-right{
+    transform:translateY(30px);
+  }
+
+  .reveal-left.is-in,
+  .reveal-right.is-in{
+    transform:translateY(0);
+  }
+
+  img,
+  video,
+  iframe{
+    max-width:100%;
+  }
+}
