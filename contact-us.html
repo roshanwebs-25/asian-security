@@ -117,3 +117,122 @@
 <script src="script.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Asian Security & Facility Services</title>
+<meta name="description" content="Contact Asian Security & Facility Services Pvt Ltd, Hyderabad. Call +91 9392806881 or email admin@asfs.services." />
+<link rel="icon" href="assets/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="contact">
+<div class="loader"><div class="ring"></div></div>
+<div id="nav-mount"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs">Home / Contact</div>
+    <h1>Let's Talk About Your Facility.</h1>
+    <p>Share your requirements with our team — we typically respond within one business day with a tailored proposal.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+
+    <form class="contact-form reveal-left" id="contact-form">
+      <div>
+        <label>Full Name</label>
+        <input type="text" id="name" required placeholder="Your full name" />
+      </div>
+
+      <div>
+        <label>Phone</label>
+        <input type="tel" id="phone" required placeholder="+91" />
+      </div>
+
+      <div>
+        <label>Select Service</label>
+        <select id="service" required>
+          <option value="">Select Service</option>
+          <option>Professional Security Services</option>
+          <option>Housekeeping Services</option>
+          <option>Integrated Pest Management</option>
+          <option>Gardening & Landscaping</option>
+          <option>Engineering Maintenance</option>
+          <option>Facility Management</option>
+          <option>Technical Services</option>
+          <option>Support Services</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn--dark" style="justify-self:start;">
+        Submit Enquiry
+      </button>
+    </form>
+
+    <div class="reveal-right">
+      <span class="eyebrow">Reach Us</span>
+      <h2 style="margin-bottom:24px;">We'd love to hear from you.</h2>
+
+      <div class="contact-info">
+        <div class="row"><span>Phone</span><strong id="c_phone"></strong></div>
+        <div class="row"><span>Email</span><strong id="c_email"></strong></div>
+        <div class="row"><span>Website</span><strong id="c_web"></strong></div>
+        <div class="row"><span>Head Office</span><strong id="c_hq"></strong></div>
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;">
+        <a class="btn btn--dark" id="c_call" href="#">📞 Call Now</a>
+        <a class="btn btn--outline" id="c_wa" href="#" target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15225.673342599239!2d78.44911969679619!3d17.4396802853003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bcc3c4626c2c2b9%3A0x4efde13b5bba9e7a!2sAsian%20Security%20And%20Facility%20Services%20-%20ASFS!5e0!3m2!1sen!2sus!4v1779818690346!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+
+<script src="data.js"></script>
+
+<script>
+  const D = window.ASFS_DATA;
+
+  c_phone.textContent = D.company.phone;
+  c_email.textContent = D.company.email;
+  c_web.textContent = D.company.website.replace("https://","");
+  c_hq.textContent = D.company.hq;
+
+  c_call.href = "tel:" + D.company.phone.replace(/\s/g,"");
+  c_wa.href = "https://wa.me/919966998182";
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const service = document.getElementById("service").value;
+
+    const whatsappNumber = "919966998182";
+
+    const message = `Hi, I am ${name}. My phone number is ${phone}. I am interested in ${service}. Please contact me.`;
+
+    const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+
+<script src="partials.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

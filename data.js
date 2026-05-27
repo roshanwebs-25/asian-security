@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* =============================================================
    ASIAN SECURITY & FACILITY SERVICES — Site Data
    Edit any values here to update them across all pages.
@@ -430,7 +429,7 @@ services: [
 
 
 
-=======
+
 /* =============================================================
    ASIAN SECURITY & FACILITY SERVICES — Site Data
    Edit any values here to update them across all pages.
@@ -862,4 +861,3 @@ services: [
 
 
 
->>>>>>> 5eb174d44868e123be3966dfe3bf7c791ad69d6d

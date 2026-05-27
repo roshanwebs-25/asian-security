@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Shared nav + footer for inner pages (auto-injected) */
 (function () {
   const D = window.ASFS_DATA;
@@ -91,7 +90,7 @@
   document.getElementById("nav-mount")?.remove();
   document.getElementById("footer-mount")?.insertAdjacentHTML("beforebegin", footer);
   document.getElementById("footer-mount")?.remove();
-=======
+})();
 /* Shared nav + footer for inner pages (auto-injected) */
 (function () {
   const D = window.ASFS_DATA;
@@ -184,5 +183,4 @@
   document.getElementById("nav-mount")?.remove();
   document.getElementById("footer-mount")?.insertAdjacentHTML("beforebegin", footer);
   document.getElementById("footer-mount")?.remove();
->>>>>>> 5eb174d44868e123be3966dfe3bf7c791ad69d6d
 })();
